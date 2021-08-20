@@ -17,13 +17,15 @@
 ### Association
 
 - has_many :orders
-- has_one :reservations
+- has_one :reservation
 
 ## reservations テーブル
 
- | Column | Type       | Options                     |
- | ------ | ---------- | --------------------------- |
- | user   | references | NOT NULL, foreign_key: true |
+ | Column     | Type       | Options                     |
+ | ---------- | ---------- | --------------------------- |
+ | user       | references | NOT NULL, foreign_key: true |
+ | start_time | datetime   | NOT NULL                    |
+ | end_time   | datetime   | NOT NULL                    |
 
  ### Association
 

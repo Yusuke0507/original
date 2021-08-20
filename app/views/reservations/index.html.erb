@@ -1,0 +1,53 @@
+<header class="header"> 
+
+
+<html lang="ja">
+  <head>
+    <title>創作</title>
+    <meta charset="utf-8">
+    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header id="header">
+      <h1 class="site-title">
+        <a href="/">創作</a>
+      </h1>
+
+      <nav id="nav">
+      <% if user_signed_in? %>
+        <ul>
+          <li><%= link_to "予約する", new_reservation_path, method: :get %></li>
+          <li><%= link_to "デリバリー", "#" %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+          <li><%= link_to "ログイン", new_user_session_path %></li>
+          <li><%= link_to "新規登録", new_user_registration_path %></li>
+        </ul>
+        <% end %>
+      </nav>
+
+    <!--
+      <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+          
+          <p><%= link_to "予約する", new_reservation_path, method: :get %></p>
+          <p><%= link_to "デリバリー", "#" %></p>
+          <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+        </div>
+      <% else %>
+        <div class="grid-6">
+          <%= link_to "ログイン", new_user_session_path %>
+          <%= link_to "新規登録", new_user_registration_path %>
+        </div>
+      <% end %>
+      -->
+    </header>
+    
+  </header>

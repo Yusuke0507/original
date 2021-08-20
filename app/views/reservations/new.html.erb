@@ -1,0 +1,17 @@
+<h1>予約フォーム</h1>
+<%= form_with model: @reservation, url: new_reservation_path, method: :get, class: 'reservation', local: true do |f| %>
+
+    <div class="reservation-price">
+      <h2>コース選択</h2>
+      <% @menu.each do |menu|%>
+        <p><%= menu.name%></p>
+        <p>お支払い金額:<%= menu.price%> 円(税込)</p>
+        <%= f.submit "↑コースの予約をする"%>
+      <% end %>
+   
+  </div>
+  <div class="reservation-btn">
+    <%= link_to '戻る', root_path%> 
+  </div>
+  
+<% end %> 
