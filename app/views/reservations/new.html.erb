@@ -56,24 +56,17 @@
   </div>
   
   <script>
-  const menu_select = document.getElementById("menu_select")
+const menu_select = document.getElementById("menu_select");
 menu_select.addEventListener('change', (event) => {
-  const selected_index = menu_select.selectedIndex;
-    const selected_option = menu_select.options[selected_index];
-  const price = selected_option.getAttribute("data-price");
-  const personPrice =document.getElementById("person_price").innerHTML = price;
-
-  const people =document.getElementById("reservation_people");
-  people.addEventListener("input", () => {
-  document.getElementById("total_price").innerHTML = Math.floor(personPrice * document.getElementById('reservation_people').value * 1);
-	console.log(personPrice);
-	console.log(people.getAttribute("value"));
-  
-  
-  })
+	const selected_index = menu_select.selectedIndex;
+	const selected_option = menu_select.options[selected_index];
+	const price = selected_option.getAttribute("data-price");
+	const personPrice = document.getElementById("person_price").innerHTML = price;
+	const people = document.getElementById("reservation_people");
+	people.addEventListener("input", () => {
+		document.getElementById("total_price").innerHTML = Math.floor(personPrice * parseInt(document.getElementById('reservation_people').value));
+	})
 });
-
-
-  </script>
+</script>
 
 <% end %> 

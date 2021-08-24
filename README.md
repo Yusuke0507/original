@@ -31,7 +31,7 @@
 
  - belongs_to :user
 
- ### items テーブル
+ ### order テーブル
 
  | Column | Type       | Options                     |
  | ------ | ---------- | --------------------------- |
