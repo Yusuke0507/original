@@ -4,7 +4,7 @@ class Reservation < ApplicationRecord
   has_one_attached :image
 
   with_options presence: true do
-    validates :menu_id, numericality: { other_than: 1}
+    validates :menu, numericality: { other_than: 1}
     validates :date
     validates :time
     validates :user_id

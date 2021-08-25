@@ -13,7 +13,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :municipality , null: false
       t.string :address , null: false
       t.string :building
-      t.references :reservation, null: false, f
+      
 
       ## Recoverable
       t.string   :reset_password_token
